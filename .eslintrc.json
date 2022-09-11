@@ -1,9 +1,9 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "plugin:react/recommended",
     "airbnb",
-    "plugin:prettier/recommended",
+    "airbnb/hooks",
+    "plugin:import/recommended",
     "prettier"
   ],
   "plugins": ["import", "react-hooks", "prettier", "prefer-arrow"],
@@ -20,10 +20,7 @@
       }
     ],
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [
-      2,
-      { "extensions": [".js", ".jsx", ".svg", "png", ".tsx"] }
-    ],
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".svg", "png", ".tsx"] }],
     "react/function-component-definition": [
       2,
       {
