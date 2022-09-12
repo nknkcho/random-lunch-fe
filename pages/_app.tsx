@@ -9,7 +9,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Random Lunch</title>
+        <title>랜덤 런치</title>
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
