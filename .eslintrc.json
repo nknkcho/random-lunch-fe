@@ -43,7 +43,8 @@
     "react/no-array-index-key": "off",
     "react/react-in-jsx-scope": "off",
     "import/no-extraneous-dependencies": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "no-alert": "off"
   },
   "env": {
     "browser": true,
