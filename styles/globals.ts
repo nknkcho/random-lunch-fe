@@ -19,6 +19,10 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  input:focus{
+    outline: none;
+  }
+
   * {
     box-sizing: border-box;
   }
