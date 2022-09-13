@@ -22,16 +22,16 @@ class MyDocument extends Document {
   }
 
   render = () => (
-    <Html>
+    <Html lang="ko">
       <Head>
         <meta charSet="utf-8" />
         <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
-        <meta property="og:title" content="" />
+        <meta property="og:title" content="랜덤 런치" />
         <meta property="og:image" content="" />
-        <meta property="og:description" content="" />
+        <meta property="og:description" content="점심 식사 그룹을 만들어주는 랜덤 런치 입니다." />
         <meta property="og:url" content="//" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta name="description" content="랜덤 런치의 홈페이지 입니다." />
+        <meta name="keywords" content="랜덤 런치" />
         <link
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css"
           rel="preload"
