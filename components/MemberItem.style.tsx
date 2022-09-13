@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ItemContainer = styled.div`
+const ItemContainer = styled.ul`
   margin: 5px auto;
   width: 200px;
   display: flex;
