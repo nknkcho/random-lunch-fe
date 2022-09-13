@@ -13,7 +13,10 @@ const MemberInput = (props: { onSaveMemberList: Function }) => {
 
   const nameSubmitHandler = async (e: { preventDefault: Function }) => {
     e.preventDefault();
+    // eslint-disable-next-line no-useless-escape
+    const specialTextTest = /[!?@#$%^&*():;+-=~{}<>\_\[\]\|\\\"\'\,\.\/\`\₩]/g;
     if (name.trim().length === 0) return alert('이름을 입력하세요');
+    if (specialTextTest.test(name)) return alert('특수문자를 제외한 이름을 입력해주세요');
 
     const newName = { name };
     const createNameRequest = await request('/members', httpMethod.POST, newName, {
