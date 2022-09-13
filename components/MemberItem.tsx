@@ -1,4 +1,4 @@
-import { Button } from './UI';
+import { DeleteButton } from './UI';
 import { ItemContainer } from './MemberItem.style';
 import { MemberListType } from '../utils/constants/interface';
 
@@ -10,7 +10,7 @@ const MemberItem = ({ member }: Member) => {
   return (
     <ItemContainer key={member.id}>
       <li>{member.name}</li>
-      <Button type="button">삭제</Button>
+      <DeleteButton type="button">삭제</DeleteButton>
     </ItemContainer>
   );
 };
