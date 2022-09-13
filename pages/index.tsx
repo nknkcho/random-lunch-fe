@@ -27,7 +27,7 @@ const Home: NextPage = ({ memberList }: InferGetServerSidePropsType<typeof getSe
     <Container>
       <Title>🍴랜덤 런치🍴</Title>
       <InputNewMember onSaveMemberList={saveMemberList} />
-      <CreateGroups />
+      <CreateGroups members={members} />
       <MemberList members={members} />
     </Container>
   );

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { DefaultButton } from './UI';
 import { Form } from './InputNewMember.style';
 import { request } from '../utils/fetch';
@@ -34,4 +34,4 @@ const MemberInput = (props: { onSaveMemberList: Function }) => {
   );
 };
 
-export default MemberInput;
+export default React.memo(MemberInput);
