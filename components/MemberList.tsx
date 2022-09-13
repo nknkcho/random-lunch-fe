@@ -1,4 +1,5 @@
 import MemberItem from './MemberItem';
+import { MemberListContainer } from './MemberList.style';
 
 interface Member {
   member: Object;
@@ -9,11 +10,11 @@ interface Member {
 const MemberList = (props: { members: [] }) => {
   const { members } = props;
   return (
-    <ul>
+    <MemberListContainer>
       {members.map((member: Member) => {
         return <MemberItem member={member} key={member.id} />;
       })}
-    </ul>
+    </MemberListContainer>
   );
 };
 

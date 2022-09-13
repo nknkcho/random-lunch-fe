@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import type { InferGetServerSidePropsType, NextPage, GetServerSideProps } from 'next';
-import MemberInput from '../components/MemberInput';
+import InputNewMember from '../components/InputNewMember';
 import MemberList from '../components/MemberList';
+import CreateGroups from '../components/CreateGroups';
 import { request } from '../utils/fetch';
 import { httpMethod } from '../utils/constants/httpMethod';
 import { MemberListType } from '../utils/constants/interface';
@@ -25,7 +26,8 @@ const Home: NextPage = ({ memberList }: InferGetServerSidePropsType<typeof getSe
   return (
     <Container>
       <Title>🍴랜덤 런치🍴</Title>
-      <MemberInput onSaveMemberList={saveMemberList} />
+      <InputNewMember onSaveMemberList={saveMemberList} />
+      <CreateGroups />
       <MemberList members={members} />
     </Container>
   );

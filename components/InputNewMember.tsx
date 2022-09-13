@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Button } from './UI';
-import { Form } from './MemberInput.style';
+import { DefaultButton } from './UI';
+import { Form } from './InputNewMember.style';
 import { request } from '../utils/fetch';
 import { httpMethod } from '../utils/constants/httpMethod';
 
@@ -13,14 +13,14 @@ const MemberInput = (props: { onSaveMemberList: Function }) => {
 
   const nameSubmitHandler = async (e: { preventDefault: Function }) => {
     e.preventDefault();
-    if (name.trim().length === 0) {
-      return alert('이름을 입력하세요');
-    }
+    if (name.trim().length === 0) return alert('이름을 입력하세요');
 
     const newName = { name };
     const createNameRequest = await request('/members', httpMethod.POST, newName, {
       'Content-Type': 'application/json',
     });
+    if (createNameRequest.status === 409) return alert('중복된 이름은 등록할 수 없습니다');
+
     const createNameResponse = await createNameRequest.json();
     onSaveMemberList(createNameResponse[0].id, createNameResponse[0].name);
     return setName('');
@@ -29,7 +29,7 @@ const MemberInput = (props: { onSaveMemberList: Function }) => {
   return (
     <Form onSubmit={nameSubmitHandler}>
       <input type="text" placeholder="이름을 입력하세요" value={name} onChange={getNameHandler} />
-      <Button type="submit">추가</Button>
+      <DefaultButton type="submit">추가</DefaultButton>
     </Form>
   );
 };
