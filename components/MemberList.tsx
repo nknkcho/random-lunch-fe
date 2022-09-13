@@ -1,14 +1,17 @@
 import MemberItem from './MemberItem';
 import { MemberListContainer } from './MemberList.style';
 
+interface Members {
+  members: [];
+}
+
 interface Member {
   member: Object;
   id: string;
   name: string;
 }
 
-const MemberList = (props: { members: [] }) => {
-  const { members } = props;
+const MemberList = ({ members }: Members) => {
   return (
     <MemberListContainer>
       {members.map((member: Member) => {
