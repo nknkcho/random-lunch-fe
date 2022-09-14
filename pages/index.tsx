@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import type { InferGetServerSidePropsType, NextPage, GetServerSideProps } from 'next';
-import InputNewMember from '../components/InputNewMember';
-import MemberList from '../components/MemberList';
-import CreateGroups from '../components/CreateGroups';
+import InputNewMember from '../components/InputNewMember/InputNewMember';
+import MemberList from '../components/MemberList/MemberList';
+import CreateGroups from '../components/CreateGroups/CreateGroups';
 import { request } from '../utils/fetch';
 import { httpMethod } from '../utils/constants/httpMethod';
 import { MemberListType } from '../utils/constants/interface';
-import { Container, Title } from '../components/UI';
+import { Container, Title } from '../components/UI/UI';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const response = await request('/members?groups=&groupSize=', httpMethod.GET);

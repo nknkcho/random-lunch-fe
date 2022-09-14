@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import closeButtonIcon from '../public/close.svg';
+import closeButtonIcon from '../../public/close.svg';
 import { ModalBackground, ModalContainer, CloseButton, ModalTitle } from './GroupResultModal.style';
 import GroupResultItem from './GroupResultItem';
 

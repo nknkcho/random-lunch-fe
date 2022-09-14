@@ -1,6 +1,6 @@
 import React from 'react';
 import { GroupOptionContainer, UpDownContainer } from './GroupOption.style';
-import { DefaultButton } from './UI';
+import { DefaultButton } from '../UI/UI';
 
 interface Props {
   optionTitle: string;
