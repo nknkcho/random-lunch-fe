@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { DefaultButton } from './UI';
+import { DefaultButton } from '../UI/UI';
 import { Form } from './InputNewMember.style';
-import { request } from '../utils/fetch';
-import { httpMethod } from '../utils/constants/httpMethod';
+import { request } from '../../utils/fetch';
+import { httpMethod } from '../../utils/constants/httpMethod';
 
 const MemberInput = (props: { onSaveMemberList: Function }) => {
   const { onSaveMemberList } = props;

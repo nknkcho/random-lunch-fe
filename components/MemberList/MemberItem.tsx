@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { DeleteButton } from './UI';
+import { DeleteButton } from '../UI/UI';
 import { ItemContainer } from './MemberItem.style';
-import { MemberListType } from '../utils/constants/interface';
-import { request } from '../utils/fetch';
-import { httpMethod } from '../utils/constants/httpMethod';
+import { MemberListType } from '../../utils/constants/interface';
+import { request } from '../../utils/fetch';
+import { httpMethod } from '../../utils/constants/httpMethod';
 
 interface Member {
   member: MemberListType;

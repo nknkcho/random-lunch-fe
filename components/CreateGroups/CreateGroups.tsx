@@ -1,10 +1,10 @@
 import React, { useState, useReducer, useCallback } from 'react';
 import GroupOption from './GroupOption';
-import { DefaultButton } from './UI';
+import { DefaultButton } from '../UI/UI';
 import { GroupOptionWrapper } from './CreateGroups.style';
 import GroupResultModal from './GroupResultModal';
-import { request } from '../utils/fetch';
-import { httpMethod } from '../utils/constants/httpMethod';
+import { request } from '../../utils/fetch';
+import { httpMethod } from '../../utils/constants/httpMethod';
 
 interface Members {
   members: [];
